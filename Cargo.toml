@@ -2,7 +2,8 @@
 resolver = "2"
 members = [
     "models/hue",
-    "graphs/lighting"
+    "graphs/lighting",
+    "libs/hue-rs"
 ]
 
 [workspace.dependencies]
