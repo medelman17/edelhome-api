@@ -1,8 +1,28 @@
 [package]
 name = "hue-rs"
-version = "0.1.0"
+version = "0.1.0-alpha.1"
+authors = ["Michael Edelman <mike.edelman@gmail.com>"]
+license = "MIT"
 edition = "2021"
+repository = "https://github.com/medelman17/edelhome-api/libs/hue-rs"
+readme = "README.md"
+keywords = [
+    "hue-bridge",
+    "hue-lights",
+    "hue-api",
+    "philips-hue",
+]
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
+reqwest = {workspace = true, features = ["json"], default-features = false}
+tokio = {workspace = true, features = ["full"]}
+serde = {workspace= true, features = ["derive"]}
+serde_json = {workspace = true}
+tracing-subscriber.workspace = true
+chrono = "0.4.31"
+url.workspace = true
+urlencoding.workspace = true
+thiserror.workspace = true
+serde-xml-rs = "0.6.0"

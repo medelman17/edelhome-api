@@ -1,14 +1,8 @@
-pub fn add(left: usize, right: usize) -> usize {
-    left + right
-}
+mod bridge;
+mod utils;
+mod error;
+mod result;
 
-#[cfg(test)]
-mod tests {
-    use super::*;
-
-    #[test]
-    fn it_works() {
-        let result = add(2, 2);
-        assert_eq!(result, 4);
-    }
-}
+pub use result::*;
+pub use error::*;
+pub use bridge::*;
